@@ -6,9 +6,11 @@ class Amazon10::CLI
   end
 
   def list_books
-    puts "These are the top 10 best selling books this week on Amazon:"
+    puts "These are the top 10 best selling fiction books this week on Amazon:"
     puts "books 1-10"
     puts "Which would you like to see more information about?"
+    bookarray = Amazon10::Book.week
+    puts bookarray[0].url
   end
 
 end
