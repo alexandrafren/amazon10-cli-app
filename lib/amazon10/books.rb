@@ -27,12 +27,13 @@ class Amazon10::Book
     book_3.bookrating = books3doc.css("div.numeric-star-data").text
     book_3.url = "amazon.com" + books3doc.css("a.see-in-store").attribute("href")
 
+    books4doc = doc.css("div.rank4")
     book_4 = self.new
-    book_4.name = ''
-    book_4.author = ''
-    book_4.weekstop = ''
-    book_4.bookrating = ''
-    book_4.url = ''
+    book_4.name = books4doc.css("div.kc-rank-card-title").text
+    book_4.author = books4doc.css("div.kc-rank-card-author").text
+    book_4.weekstop = books4doc.css("div.kc-wol").text
+    book_4.bookrating = books4doc.css("div.numeric-star-data").text
+    book_4.url = "amazon.com" + books4doc.css("a.see-in-store").attribute("href")
 
     book_5 = self.new
     book_5.name = ''
