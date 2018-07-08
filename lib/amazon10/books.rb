@@ -1,84 +1,86 @@
 class Amazon10::Book
-  attr_accessor :name, :author, :genre, :bookdescription, :price, :url
+  attr_accessor :name, :author, :weekstop, :bookrating, :price, :url
 
   def self.week
+    doc = Nokogiri::HTML(open(https://www.amazon.com/charts/2018-07-01/mostsold/fiction/))
+    books1doc = doc.css("div #rank1-mobile")
     book_1 = self.new
-    book_1.name = ''
-    book_1.author = ''
-    book_1.genre = ''
-    book_1.bookdescription = ''
+    book_1.name = books1doc.css("div.kc-rank-card-title").text
+    book_1.author = books1doc.css("div.kc-rank-card-author").text
+    book_1.weekstop = books1doc.css("div.kc-wol").text
+    book_1.bookrating = ''
     book_1.price = ''
     book_1.url = ''
 
     book_2 = self.new
     book_2.name = ''
     book_2.author = ''
-    book_2.genre = ''
-    book_2.bookdescription = ''
+    book_2.weekstop = ''
+    book_2.bookrating = ''
     book_2.price = ''
     book_2.url = ''
 
     book_3 = self.new
     book_3.name = ''
     book_3.author = ''
-    book_3.genre = ''
-    book_3.bookdescription = ''
+    book_3.weekstop = ''
+    book_3.bookrating = ''
     book_3.price = ''
     book_3.url = ''
 
     book_4 = self.new
     book_4.name = ''
     book_4.author = ''
-    book_4.genre = ''
-    book_4.bookdescription = ''
+    book_4.weekstop = ''
+    book_4.bookrating = ''
     book_4.price = ''
     book_4.url = ''
 
     book_5 = self.new
     book_5.name = ''
     book_5.author = ''
-    book_5.genre = ''
-    book_5.bookdescription = ''
+    book_5.weekstop = ''
+    book_5.bookrating = ''
     book_5.price = ''
     book_5.url = ''
 
     book_6 = self.new
     book_6.name = ''
     book_6.author = ''
-    book_6.genre = ''
-    book_6.bookdescription = ''
+    book_6.weekstop = ''
+    book_6.bookrating = ''
     book_6.price = ''
     book_6.url = ''
 
     book_7 = self.new
     book_7.name = ''
     book_7.author = ''
-    book_7.genre = ''
-    book_7.bookdescription = ''
+    book_7.weekstop = ''
+    book_7.bookrating = ''
     book_7.price = ''
     book_7.url = ''
 
     book_8 = self.new
     book_8.name = ''
     book_8.author = ''
-    book_8.genre = ''
-    book_8.bookdescription = ''
+    book_8.weekstop = ''
+    book_8.bookrating = ''
     book_8.price = ''
     book_8.url = ''
 
     book_9 = self.new
     book_9.name = ''
     book_9.author = ''
-    book_9.genre = ''
-    book_9.bookdescription = ''
+    book_9.weekstop = ''
+    book_9.bookrating = ''
     book_9.price = ''
     book_9.url = ''
 
     book_10 = self.new
     book_10.name = ''
     book_10.author = ''
-    book_10.genre = ''
-    book_10.bookdescription = ''
+    book_10.weekstop = ''
+    book_10.bookrating = ''
     book_10.price = ''
     book_10.url = ''
 
