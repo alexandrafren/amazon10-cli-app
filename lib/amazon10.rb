@@ -1,5 +1,6 @@
-require "amazon10/version"
+require "open-uri"
+require "nokogiri"
 
-module Amazon10
-  # Your code goes here...
-end
+require_relative "./amazon10/version"
+#require_relative "./amazon10/cli"
+#require_relative "./amazon10/books"
